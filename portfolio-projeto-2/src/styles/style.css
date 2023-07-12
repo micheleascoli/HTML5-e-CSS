@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-/*<a target="_blank" href="https://icons8.com/icon/62856/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>*/
-
 :root {
-
     --cor-primaria: #292444;
     --cor-secundaria: #f6f6f6;
     --cor-terciaria: #FFABE1;
     --cor-hover: #69558f;
     
-
     --font-primaria: 'Krona One', sans-serif;
     --font-secundaria:'Montserrat', sans-serif;
 }
@@ -36,7 +32,7 @@ body {
 
 .cabecalho__menu__link {
     font-family: var(--font-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
     text-decoration: none;
@@ -51,10 +47,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px; 
@@ -62,12 +59,12 @@ body {
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family:var(--font-primaria);
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--font-secundaria);
 }
 
@@ -83,10 +80,10 @@ body {
 .apresentacao__conteudo__links__subtitulo {
     font-family:var(--font-primaria); 
     font-weight: 400;
-    font-size: 24px;       
+    font-size: 1.5rem;       
 }
 
-.apresentacao__conteudo__links__link {
+.apresentacao__conteudo__links__navegacao {
     display: flex;
     justify-content: center;
     gap: 16px; 
@@ -94,10 +91,10 @@ body {
     color: var(--cor-secundaria);
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--font-secundaria);
     font-weight: 600;
-    width: 378px;
+    width: 50%;
     padding: 21.5px 0;
     text-decoration: none;
 }
@@ -107,17 +104,48 @@ body {
     padding: 3%;
 }
 
+
+.apresentacao__imagem {
+    width: 50%;    
+}
+
 .rodape {
-    padding: 24px;
+    padding: 1.5rem;
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--font-secundaria);
     font-weight: 400;
+
     bottom: 0;
     left: 0;
     right: 0;
-    position: absolute;
+    position: relative;
+
+}
+
+
+@media (max-width: 1200px){
+    .cabecalho {
+        padding: 10%;   
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    
+
+
 
 }
